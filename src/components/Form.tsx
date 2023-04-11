@@ -1,15 +1,14 @@
 import React,{useEffect,useState} from "react"
 import axios from "axios";
-import { log } from "console";
 
-interface Data{
+interface Form{
     name: string;
     email: string;
     tel: string;
     context: string;
 }
 
-const initialData:Data = {
+const initialData:Form = {
     name: "",
     email: "",
     tel: "",
@@ -18,7 +17,7 @@ const initialData:Data = {
 
 
 export default function Form(){
-    const [result,setResult] = useState<Data>(initialData);
+    const [result,setResult] = useState<Form>(initialData);
     
     const handleChange = ( {target} : any) => {
         setResult((currentUser) => ({
@@ -41,13 +40,11 @@ export default function Form(){
                 data: result,
               }
               );
-              console.log({ res });
               await alert("ส่งข้อมูลสำเร็จ")
             }
           } catch (error) {
             console.log(result)
             console.log(error);
-            
           }
     }
     return(
