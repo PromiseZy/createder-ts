@@ -4,7 +4,7 @@ import Form from "@/components/Form"
 export default function contact() {
   return (
     <div>
-      <div className="flex min-h-screen flex-col items-center justify-between" style={{ fontFamily: 'Prompt' }}>
+      <div className="md:flex hidden min-h-screen flex-col items-center justify-between" style={{ fontFamily: 'Prompt' }}>
         <div className="bg-orange-100 " style={{ width: '100%',height: "398px" }}>
               <div className="" style={{paddingLeft: "135px" ,paddingTop: "198px"}}>
                   <p className="text-lg font-medium" style={{paddingBottom:"17px"}}>ติดต่อพวกเรา</p>
@@ -58,6 +58,9 @@ export default function contact() {
         <div className="absolute right-0" style={{marginTop:"81px", marginRight:"135px"}}>
           <Form/>
         </div>
+      </div>
+      <div className="md:hidden flex justify-center">
+        <Form/>
       </div>
     </div>
   )
