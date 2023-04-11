@@ -7,6 +7,8 @@ export default function Home() {
             <p>
               หน้าหลักจ้า
             </p>
+
+            
         </div>
       </div>
     </div>
