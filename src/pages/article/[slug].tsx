@@ -1,3 +1,5 @@
+import CardList from "@/components/Card"
+
 export default function article() {
     return (
       <div>
@@ -22,7 +24,7 @@ export default function article() {
                 </svg>
               </div>
             </div>
-            <div className="z-10 " style={{width:"822px"}}>
+            <div className="z-10 h-full" style={{width:"822px"}}>
               <div>
                 <div className="flex mt-16">
                   <p>Tawatch Petkaew</p>
@@ -37,9 +39,59 @@ export default function article() {
                 </div>
               </div>
             </div>
+            <div className="z-20 mx-40 pt-9" style={{maxWidth:"960px",maxHeight:"502.4px"}}>
+                  <img src="/WebCover-Post2.jpg"></img>
+            </div>
+            <div className="h-full text-lg" style={{marginTop:"64.6px",marginLeft:"309px",marginRight:"309px",maxWidth:"822px"}}>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
+
+              </div>
         </div>
-        <div>
-        </div>
+        <div style={{ fontFamily: 'Prompt' }}>
+          <div className="flex flex-col mx-20 h-40 mt-16 " style={{maxWidth:"1280px"}}>
+                <div className="ml-6 p-4" style={{width:"228px",height:"68px"}} >
+                  <p className="text-3xl font-medium">แท็กที่เกี่ยวข้อง</p>
+                </div>
+                <div className="ml-6">
+                  <div className="p-4 flex mt-4 flex-row">
+                    <div className="bg-orange-400 w-auto mr-4"style={{height:"44px",borderRadius:"32px"}}>
+                      <p className="px-4 py-3 text-white">ยิงแอด</p>
+                    </div>
+                    <div className="bg-orange-400 w-auto mr-4"style={{height:"44px",borderRadius:"32px"}}>
+                      <p className="px-4 py-3 text-white">ร้านอาหาร</p>
+                    </div>
+                    <div className="bg-orange-400 w-auto mr-4"style={{height:"44px",borderRadius:"32px"}}>
+                      <p className="px-4 py-3 text-white">โคราช</p>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div className="flex flex-col pt-8 mx-20 " style={{marginBottom:"58px"}}>
+                <div className="ml-6 p-4">
+                  <p className="text-3xl font-medium">บทความอื่นๆ</p>
+                </div>
+                <div className="pl-10 pt-4 flex ">
+                  <CardList/>
+                  <CardList/>
+                  <CardList/>
+                  <CardList/>
+                </div>
+              </div>
+          </div>
       </div>
     )
   }
