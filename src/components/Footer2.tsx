@@ -13,7 +13,7 @@ export default function Footer2() {
                 </svg>
             </div>
             
-            <div className=" absolute py-8 md:space-x-16 max-[767.5px]:space-y-8 max-[768px]:px-4 md:flex md:py-16 md:px-8">
+        <div className=" absolute py-8 md:space-x-16 max-[767.5px]:space-y-8 max-[768px]:px-4 md:flex md:py-16 md:px-8">
             <div className="lg:w-80 md:w-[200px]">
                 <div className="pb-3.5">
                     <img src="/CreatederLogoB.png" alt="Test" />
@@ -150,7 +150,7 @@ export default function Footer2() {
 
         
     </div>
-    <div className="text-center text-base pt-8 pb-12 text-neutral-400" style={{ fontFamily: 'Prompt' }}>
+    <div className="text-center text-base md:pt-8 md:pb-12 py-4 p-2.5 text-neutral-400" style={{ fontFamily: 'Prompt' }}>
         <p>© 2023 บริษัท ครีเอทเดอร์ จำกัด. สงวนสิทธิ์ทุกประการ</p>
     </div>
     

@@ -5,7 +5,7 @@ export default function Footer() {
     <>
 
     <div className="flex justify-center" style={{ fontFamily: 'Prompt' }}>
-        <div className="flex justify-center bg-orange-50 rounded-2xl md:w-[1248px] md:h-[353px] min-[279px]:w-full min-[279px]:h-[744px] max-[1024px]:rounded-none">
+        <div className="flex justify-center md:bg-orange-50 bg-orange-100 rounded-2xl md:w-[1248px] md:h-[353px] min-[279px]:w-full min-[279px]:h-[744px] max-[1024px]:rounded-none">
             
         <div className=" md:h-[353px] flex items-end min-[375px]:items-center w-[375px] opacity-10 md:w-[500px]" >            
             <svg width={380} viewBox="0 0 231 216" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,17 +26,17 @@ export default function Footer() {
         </div>
 
         <div className=" absolute py-8 md:space-x-16 max-[767.5px]:space-y-8 max-[768px]:px-4 md:flex md:py-16 md:px-8">
-            <div className="w-80">
+            <div className="lg:w-80 md:w-[200px]">
                 <div className="pb-3.5">
                     <img src="/CreatederLogo.png" alt="Test" />
                 </div>
                 
                 <div className="space-y-4">
-                    <p className=" text-base text-neutral-600">บริษัท ครีเอทเดอร์ จำกัด</p>
-                    <p className=" text-base text-neutral-600">พวกเราเชี่ยวชาญในอุตสาหกรรม
-อสังหาริมทรัพย์</p>
-                    <div className="flex space-x-3">
-                    <div className="Fb">
+                    <p className=" text-base  text-neutral-600">บริษัท ครีเอทเดอร์ จำกัด</p>
+                    <p className=" text-base text-neutral-600">เลขที่ 179/88 ซอยมิตรภาพ 4 ตำบล ในเมือง อำเภอเมืองนครราชสีมา จังหวัดนครราชสีมา 30000</p>
+                </div>
+                    <div className="flex pt-3.5 space-x-3">
+                        <div className="Fb">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="white"/>
                                 <g clip-path="url(#clip0_62_445)">
@@ -107,17 +107,17 @@ export default function Footer() {
 
 
                     </div>
-                </div>
+                
             </div>
-            <div className="w-80">
-                <div className="pb-7">
+            <div className="lg:w-80 md:w-[200px]">
+                <div className="pb-5">
                     <h1 className="text-xl text-neutral-800 font-semibold">ทางลัด</h1>
                 </div>
-                <div className="flex flex-col space-y-3 text-neutral-600">
-                    <Link className="hover:text-orange-400" href={""}>หน้าหลัก</Link>
-                    <Link className="hover:text-orange-400" href={""}>บริการของเรา</Link>
-                    <Link className="hover:text-orange-400" href={""}>ติดต่อเรา</Link>
-                    <Link className="hover:text-orange-400" href={""}>บทความ</Link>
+                <div className="flex flex-col space-y-3  text-neutral-600 ">
+                    <Link className="hover:text-orange-400" href="/">หน้าหลัก</Link>
+                    <Link className="hover:text-orange-400" href="/serve">บริการของเรา</Link>
+                    <Link className="hover:text-orange-400" href="/contact">ติดต่อเรา</Link>
+                    <Link className="hover:text-orange-400" href="/article">บทความ</Link>
                     <Link className="hover:text-orange-400" href={""}>นโยบายความเป็นส่วนตัว</Link>
                 </div>
             </div>
@@ -126,7 +126,7 @@ export default function Footer() {
                     <h1 className="text-xl text-neutral-800 font-semibold">รับข้อมูล และบทความใหม่</h1>
                 </div>
                 <div className="space-y-[26px]">
-                    <p className=" text-base text-neutral-600">กรอกอีเมลของคุณ <br/> เพื่อรับข้อมูลดีๆ จากเรา</p>
+                    <p className=" text-base  text-neutral-600">กรอกอีเมลของคุณ <br/> เพื่อรับข้อมูลดีๆ จากเรา</p>
                     
                     
                     <div className="flex flex-row bg-white w-[320px] min-[1200px]:w-[320px] md:w-[200px] h-[54px] border rounded-[7px]">
@@ -152,7 +152,11 @@ export default function Footer() {
                 </div>
 
             </div>
-            </div>
+        
+
+        
+        </div>
+
         </div>
     </div>
     <div className="text-center text-base md:pt-8 md:pb-12 py-4 p-2.5 text-neutral-400" style={{ fontFamily: 'Prompt' }}>
