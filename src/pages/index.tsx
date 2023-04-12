@@ -1,3 +1,4 @@
+import CardList from "@/components/Card"
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
             <p>
               หน้าหลักจ้า
             </p>
-        
+        <CardList/>
             
         </div>
       </div>
