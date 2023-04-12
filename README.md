@@ -1,13 +1,21 @@
 ## update code ของโอ๊ค 12/4/2023
 
 ###### ทำ Page ติดต่อเราตาม design ของพี่ Golf และทำให้สามารถ interact กับ starpi schema contact ได้ดังรูป
-![image](https://user-images.githubusercontent.com/89379680/231371828-f2dfb012-642c-4be6-bdf1-3cf0865e65cd.png)
+![image](https://user-images.githubusercontent.com/89379680/231400888-0059428d-ea63-45de-a03b-cc1117742374.png)
 ![image](https://user-images.githubusercontent.com/89379680/231372273-faa1013e-6fc7-4dd8-ab4d-dd4681f42ce5.png)
 
 ###### ทำ MenuBar ตาม design ของพี่ Golf (ยังไม่ได้เพิ่ม i18n)
 ![image](https://user-images.githubusercontent.com/89379680/231372524-b1d4d59d-e63d-42b7-bf6a-a20ad2def044.png)
 ![image](https://user-images.githubusercontent.com/89379680/231372723-38b57e97-58c4-4d2b-965d-81691f29807f.png)
 ###### <br>(ของจริงภาพไม่แตกอันนี้ซูมมา)
+
+###### ทำหน้า slug ของบทความ(mockup ยังไม่สามารถ interact กับ strapi ได้) ตาม design ของพี่ Golf
+![image](https://user-images.githubusercontent.com/89379680/231401309-dcc13c3f-f37a-4d90-af9b-ca27e5751559.png)
+![image](https://user-images.githubusercontent.com/89379680/231401513-7855eea4-f614-496b-8b74-66eae0fde481.png)
+![image](https://user-images.githubusercontent.com/89379680/231401710-a056d124-258b-43e6-be67-1f35955e17af.png)
+####### <br> Card ใช้ของที่ได้จากออย
+
+
 
 
 
