@@ -3,7 +3,7 @@ export default function CardList() {
         <>
         <div className="lg:w-80 lg:h-[362px] md:w-[375px] mb:h-[396.94px] p-4 bg-white  shadow-md " style={{ fontFamily: 'Prompt' }}>
             <div className="rounded-[8px]">
-                <img src="/Thumbnail.png" alt="Test" className="lg:w-72 lg:h-[162px] md:w-[343px] mb:h-[192.94px]" />
+                <img src="/Thumbnail.png" alt="Test" className="lg:w-72 lg:h-[162px] w-[343px] mb:h-[192.94px]" />
             </div>
 
             <div className="flex text-xs font-light space-x-4 py-4 text-slate-500">
