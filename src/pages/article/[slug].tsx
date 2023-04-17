@@ -1,6 +1,71 @@
 import CardList from "@/components/Card"
+import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useEffect,useState } from "react"
+import axios from "axios";
+import { useEffectOnce } from 'usehooks-ts'
+import ReactMarkdown from "react-markdown";
+
 
 export default function article() {
+
+  const [artData,setArtData] = useState<any>();
+
+  function getSlug(path:string){
+    return "/article/"+path
+  }
+
+  function getImg(path:string){
+    console.log("http://localhost:1337"+path);
+    
+
+    return "http://localhost:1337"+path
+  }
+
+  function getDate(date:string){
+
+    const monthName:string[] =[      
+    "มกราคม",
+    "กุมภาพันธ์",
+    "มีนาคม",
+    "เมษายน",
+    "พฤษภาคม",
+    "มิถุนายน",
+    "กรกฎาคม",
+    "สิงหาคม",
+    "กันยายน",
+    "ตุลาคม",
+    "พฤศจิกายน",
+    "ธันวาคม",]
+    
+
+    const year = date.substring(0,4)
+    const m = parseInt(date.substring(5,7))
+    const month = monthName[m-1]
+    const day = date.substring(8,10)
+    return day+" "+month+" "+year
+  }
+
+  async function getData() {
+    try{
+      const {data} = await axios.get("http://localhost:1337/api/articles?populate=*&locale=all")
+      for(let i = 0;i<data.data.length;i++){
+        console.log(getSlug(data.data[i].attributes.slug)===window.location.pathname);
+        if(getSlug(data.data[i].attributes.slug)===window.location.pathname){
+          setArtData(data.data[i])
+        }
+      }
+
+    }catch(error){
+      console.log(error)
+    }
+  }
+
+  useEffectOnce(() => {
+    getData()
+  })
+
+
+
+  if(!artData) return;
     return (
       <div>
         <div className="flex min-h-screen flex-col items-center justify-between " style={{ fontFamily: 'Prompt' }}>
@@ -27,37 +92,26 @@ export default function article() {
             <div className="z-10 h-full" style={{width:"822px"}}>
               <div>
                 <div className="flex mt-16">
-                  <p>Tawatch Petkaew</p>
-                  <p className="ml-4">5 เมษายน 66</p>
+                  <p className="text-slate-500">{artData.attributes.createBy}</p>
+                  <p className="ml-4 text-slate-500">{getDate(artData.attributes.createdAt)}</p>
                 </div>
                 <div className="text-5xl font-medium mt-6" style={{lineHeight:"57.6px"}}>
-                  <p>สูตรลัดยิงโฆษณาให้ปัง ฉบับมือใหม่ก็ทำได้ </p>
+                  <p>{artData.attributes.title}</p>
                 </div>
                 <div className="flex mt-6">
-                  <p>หมวดหมู่ : </p>
-                  <p className="ml-4">การตลาด</p>
+                  <p className="text-slate-500">หมวดหมู่ : </p>
+                  {
+                  artData.attributes.categories.data.map((cat:any) =>
+                    <p className="pl-4 text-orange-400">{cat.attributes.name}</p>
+                  )}
                 </div>
               </div>
             </div>
             <div className="z-20 mx-40 pt-9" style={{maxWidth:"960px",maxHeight:"502.4px"}}>
-                  <img src="/WebCover-Post2.jpg"></img>
+              <img style={{maxWidth:"960px",maxHeight:"502.4px"}} src={getImg(artData.attributes.photo.data[0].attributes.url)}></img>
             </div>
-            <div className="h-full text-lg" style={{marginTop:"64.6px",marginLeft:"309px",marginRight:"309px",maxWidth:"822px"}}>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius culpa quas illo? Voluptatibus non veniam in saepe? Veniam veritatis officiis dolore vitae dolorem non ratione eligendi repellendus similique eum.</p>
-
+            <div className="h-full text-lg " style={{marginTop:"64.6px",marginLeft:"309px",marginRight:"309px",maxWidth:"822px"}}>
+                <ReactMarkdown  children={artData.attributes.content}/>
               </div>
         </div>
         <div style={{ fontFamily: 'Prompt' }}>
