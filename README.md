@@ -1,3 +1,16 @@
+## update code ของโอ๊ค 17/4/2023
+
+#### ทำให้หน้าบทความนำข้อมูลจาก Strapi มาแสดงผล และ ดึงtag จาก database category ที่เชื่อมกันมาแสดงได้
+![image](https://user-images.githubusercontent.com/89379680/232451141-93eeeffc-8a13-478a-ad0c-cb16a127e579.png)
+![image](https://user-images.githubusercontent.com/89379680/232451228-0e4a2afb-1b0e-4220-96fa-a2dcb324fdb6.png)
+![image](https://user-images.githubusercontent.com/89379680/232451331-675f66a6-5d2f-46aa-864a-0e5876807241.png)
+![image](https://user-images.githubusercontent.com/89379680/232451983-25423a5b-cfe0-45cb-9107-f1855eae47e8.png)
+
+#### ทำหน้า responsive ของ form และเพิ่มให้ปุ่มทำงานได้ตรงกับเงื่อนไขที่พี่ Golf design
+![image](https://user-images.githubusercontent.com/89379680/232451781-00edf5f0-88f9-4f1d-bd5c-353a9561a0d9.png)
+
+
+
 ## update code ของโอ๊ค 12/4/2023
 
 #### ทำ Page ติดต่อเราตาม design ของพี่ Golf และทำให้สามารถ interact กับ starpi schema contact ได้ดังรูป
