@@ -9,6 +9,12 @@
 #### ทำหน้า responsive ของ form และเพิ่มให้ปุ่มทำงานได้ตรงกับเงื่อนไขที่พี่ Golf design
 ![image](https://user-images.githubusercontent.com/89379680/232451781-00edf5f0-88f9-4f1d-bd5c-353a9561a0d9.png)
 
+## update code ของออย 17/04/2566
+ปรับแต่ง Responsive Design หน้า slug ปรับ การ์ดให้ปรับขนาดตามหน้าจอ
+![Screenshot 2023-04-17 171059](https://user-images.githubusercontent.com/87195907/232467135-93957d5f-8642-4659-8203-a1413d02b81e.png)
+![Screenshot 2023-04-17 171126](https://user-images.githubusercontent.com/87195907/232467143-28598589-2184-4d1e-b10f-224b6b037592.png)
+![Screenshot 2023-04-17 171031](https://user-images.githubusercontent.com/87195907/232467351-3ac3339a-017f-49ed-8118-f689a4aa4c4f.png)
+
 
 ## update code ของออย
 ทำ Footer 2 แบบ จาก figma ค่ะ
