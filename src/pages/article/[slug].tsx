@@ -69,8 +69,8 @@ export default function article() {
     return (
       <div>
         <div className="flex min-h-screen flex-col items-center justify-between " style={{ fontFamily: 'Prompt' }}>
-            <div className="z-0 flex absolute w-full bg-orange-50" style={{width:"100%", height:"600px"}}>
-              <div className="absolute right-0" style={{marginTop:"33.18px", marginRight:"96.43px"}}>
+            <div className="z-0 flex absolute w-full md:h-[600px] h-[212px] bg-orange-50" style={{width:"100%"}}>
+              <div className="md:absolute md:right-0 max-[768px]:hidden" style={{marginTop:"33.18px", marginRight:"96.43px"}}>
                 <svg width="608" height="567" viewBox="0 0 608 567" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.05">
                 <path d="M318.677 178.83V250.776C283.446 221.412 246.99 206.717 209.307 206.717C167.796 206.717 132.815 221.587 104.366 251.302C75.7658 280.841 61.4534 316.99 61.4534 359.747C61.4534 402.505 75.7658 437.602 104.366 466.64C132.966 495.679 168.046 510.174 209.557 510.174C231.026 510.174 249.242 506.694 264.255 499.735C272.637 496.255 281.294 491.574 290.302 485.666C299.285 479.758 308.743 472.624 318.702 464.287V537.536C283.822 557.187 247.19 567 208.807 567C151.056 567 101.788 546.923 60.978 506.769C20.3176 466.265 0 417.45 0 360.248C0 308.979 17.0148 263.268 51.0193 223.114C92.8807 173.923 147.053 149.34 213.511 149.34C250.903 149.34 284.848 159.153 318.702 178.805L318.677 178.83Z" fill="url(#paint0_linear_53_1355)"/>
@@ -89,37 +89,37 @@ export default function article() {
                 </svg>
               </div>
             </div>
-            <div className="z-10 h-full" style={{width:"822px"}}>
+            <div className="z-10 h-full px-4" style={{width:"auto"}}>
               <div>
-                <div className="flex mt-16">
+                <div className="flex md:mt-16 mt-8 text-sm font-light text-slate-500">
                   <p className="text-slate-500">{artData.attributes.createBy}</p>
                   <p className="ml-4 text-slate-500">{getDate(artData.attributes.createdAt)}</p>
                 </div>
-                <div className="text-5xl font-medium mt-6" style={{lineHeight:"57.6px"}}>
+                <div className="md:text-5xl md:mt-6 md:leading-[57.6px] text-3xl mt-4 font-medium">
                   <p>{artData.attributes.title}</p>
                 </div>
-                <div className="flex mt-6">
+                <div className="flex md:mt-6 md:pb-9 mt-4 pb-8">
                   <p className="text-slate-500">หมวดหมู่ : </p>
                   {
                   artData.attributes.categories.data.map((cat:any) =>
-                    <p className="pl-4 text-orange-400">{cat.attributes.name}</p>
+                    <p className="ml-4 font-medium text-orange-500">{cat.attributes.name}</p>
                   )}
                 </div>
               </div>
             </div>
-            <div className="z-20 mx-40 pt-9" style={{maxWidth:"960px",maxHeight:"502.4px"}}>
+            <div className="z-20 md:mx-40 md:max-w-[960px] md:max-h-[502.4px]">
               <img style={{maxWidth:"960px",maxHeight:"502.4px"}} src={getImg(artData.attributes.photo.data[0].attributes.url)}></img>
             </div>
-            <div className="h-full text-lg " style={{marginTop:"64.6px",marginLeft:"309px",marginRight:"309px",maxWidth:"822px"}}>
+            <div className="h-full md:mt-[64.6px] px-4 mt-5 md:mx-[309px] md:max-w-[822px] md:text-lg text-base">
                 <ReactMarkdown  children={artData.attributes.content}/>
               </div>
         </div>
         <div style={{ fontFamily: 'Prompt' }}>
-          <div className="flex flex-col mx-20 h-40 mt-16 " style={{maxWidth:"1280px"}}>
-                <div className="ml-6 p-4" style={{width:"228px",height:"68px"}} >
-                  <p className="text-3xl font-medium">แท็กที่เกี่ยวข้อง</p>
+          <div className="flex flex-col mt-8 md:mx-20 md:h-40 md:mt-16 " >
+                <div className="md:ml-6 md:p-4 pl-4" >
+                  <p className="md:text-3xl text-2xl font-medium">แท็กที่เกี่ยวข้อง</p>
                 </div>
-                <div className="ml-6">
+                <div className="md:ml-6 text-sm">
                   <div className="p-4 flex mt-4 flex-row">
                     <div className="bg-orange-400 w-auto mr-4"style={{height:"44px",borderRadius:"32px"}}>
                       <p className="px-4 py-3 text-white">ยิงแอด</p>
@@ -134,11 +134,11 @@ export default function article() {
                 </div>
                 
               </div>
-              <div className="flex flex-col pt-8 mx-20 " style={{marginBottom:"58px"}}>
+              <div className="flex flex-col md:pt-8 md:pb-[58px] md:mx-20 pt-12">
                 <div className="ml-6 p-4">
                   <p className="text-3xl font-medium">บทความอื่นๆ</p>
                 </div>
-                <div className="pl-10 pt-4 flex ">
+                <div className="md:pl-10 md:pt-4 min-[400px]:px-4 xl:flex min-[950px]:grid min-[950px]:grid-cols-2 md-max-[375px]:pb-24 max-[376px]:pb-24">
                   <CardList/>
                   <CardList/>
                   <CardList/>
